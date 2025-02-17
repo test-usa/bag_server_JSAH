@@ -7,7 +7,7 @@ dotenv.config({
 
 const config = {
   port: process.env.PORT,
-  mongo_Uri: process.env.MONGODB_URI as string,
+  mongo_Uri: process.env.mongodb_uri as string,
   salt_rounds: process.env.SALT_ROUNDS as string,
   nodeEnv: process.env.NODE_ENV,
   jwt_token: process.env.JWT_TOKEN_SECRET as string,
