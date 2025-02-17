@@ -29,7 +29,7 @@ const createProductIntoDB = async (userId: string, shopId: string, productListId
     };
 
     
-    // console.log("product data",updatedProductData)
+    console.log("product data",updatedProductData)
 
     // Create the product within the session
     const productResult = await ProductModel.create([updatedProductData], { session });
@@ -57,6 +57,8 @@ const createProductIntoDB = async (userId: string, shopId: string, productListId
     // Upload images
     const filePaths = files.map((file: any) => file.path);
     const images = await uploadMultipleImages(filePaths);
+
+    console.log("this is images",images)
 
     // Create the variant object
     const variantObject = {
